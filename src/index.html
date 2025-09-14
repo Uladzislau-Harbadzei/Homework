@@ -6,87 +6,82 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-		.button-link {
-			display: inline-block;
-			padding: 10px 20px;
-			background-color: #4CAF50;
-			color: white;
-			text-decoration: none;
-			border-radius: 4px;
-			font-family: Arial, sans-serif;
-			font-size: 16px;
-		}
-
-		.button-link:hover {
-			background-color: #45a049;
-		}
 	</style>
 </head>
-
+<a href='index.html'><img src='images/scale_1200.png' width='700' title='angry dino' class="img"/></a>
 <body>
 	<div>
-		<h1>REGISTRATION</h1>
-		<a href='index.html'><img src='images/scale_1200.png' alt='' width='500' title='angry dino' /></a>
-			<form id="registerForm" name='registerForm'>
-				<div>
-					<label>Email</label>
-					<input type='text' name='email' class="email field"/>
-					<div id="emailError">error</div>
-				</div>
-				<div>
-					<label class="label">Password</label>
-					<input id="password" type='password' name='password' class='from field'/>
-        </div>
+			<form action="#" id = "form" class="form">
+                <h1 class="form_title" >REGISTRATION</h1>
+				    <div class ="form_item">
+					<label for="name" class="form_label">Name:</label>
+                    <input type="text" id="name" autocomplete="off" class="form_input">
+                    </div>
+                    <div class ="form_item">
+					<label for="email" class="form_label">Email:</label>
+                    <input type="email" id="email" autocomplete="off" class="form_input">
+                    </div>
+                    <div class ="form_item">
+					<label for="password" class="form_label">Password:</label>
+                    <input type="password" id="password" autocomplete="off" class="form_input">
+                    </div>
+                    
+                    <div>
+                    <label>Year of birth:</label>
+                    </div>
+                    <div>
+                    <select class='yearOfBirth field'>
+                        <option></option>
+                        <option value='2000'>2000</option>
+                        <option value='2001'>2001</option>
+                        <option value='2002'>2002</option>
+                        <option value='2003'>2003</option>
+                        <option value='2004'>2004</option>
+                        <option value='2005'>2005</option>
+                        <option value='2006'>2006</option>
+                        <option value='2007'>2007</option>
+                        <option value='2008'>2008</option>
+                        <option value='2009'>2009</option>
+                        <option value='2010'>2010</option>
+                        <option value='2011'>2011</option>
+                        <option value='2012'>2012</option>
+                        <option value='2013'>2013</option>
+                        <option value='2014'>2014</option>
+                        <option value='2015'>2015</option>
+                        <option value='2016'>2016</option>
+                        <option value='2017'>2017</option>
+                        <option value='2018'>2018</option>
+                        <option value='2019'>2019</option>
+                        <option value='2020'>2020</option>
+                        <option value='2021'>2021</option>
+                        <option value='2022'>2022</option>
+                        <option value='2023'>2023</option>
+                        <option value='2024'>2024</option>
+                        <option value='2025'>2025</option>
+                        </select>
+                    </div>
+                    <div>
+                        <h5 class="form_title" >Favorite Dinosaur</h5>
+                        <textarea placeholder='Name your favorite dinosaur'></textarea>
+                    </div>
 					<div>
 						<label>Sex</label>
 						<input id="radio" type='radio' name='sex' value='0'/> Man
 						<input id="radio" type='radio' name='sex' value='1'/> Woman
 						<input id="radio" type='radio' name='sex' value='1'/> Dinosaur
-        </div>
+                    </div>
 						<div>
 							<label  class="label">I agree with the rules</label>
 							<input id="checkbox" type='checkbox' name='rules' required/>
-        </div>
+                    </div>
 							<div>
 								<label  class="label">Load photo</label>
 								<input type='file' name='avatar'/>
-        </div>
-								<div>
-									<label>Year of birth</label>
-									<select name='year'>
-            <option value='2000'>2000</option>
-            <option value='2001'>2001</option>
-            <option value='2002'>2002</option>
-            <option value='2003'>2003</option>
-            <option value='2004'>2004</option>
-            <option value='2005'>2005</option>
-            <option value='2006'>2006</option>
-            <option value='2007'>2007</option>
-            <option value='2008'>2008</option>
-            <option value='2009'>2009</option>
-            <option value='2010'>2010</option>
-            <option value='2011'>2011</option>
-            <option value='2012'>2012</option>
-            <option value='2013'>2013</option>
-            <option value='2014'>2014</option>
-            <option value='2015'>2015</option>
-            <option value='2016'>2016</option>
-            <option value='2017'>2017</option>
-            <option value='2018'>2018</option>
-            <option value='2019'>2019</option>
-            <option value='2020'>2020</option>
-            <option value='2021'>2021</option>
-            <option value='2022'>2022</option>
-            <option value='2023'>2023</option>
-            <option value='2024'>2024</option>
-            <option value='2025'>2025</option>
-            </select>
-								</div>
-								<div>
-									<textarea placeholder='Name your favorite dinosaur'></textarea>
-								</div>
-								<input id="submit" type='submit' name='signup' class="button-link" value='Login'/>
-    </form>
+                            </div>
+                        
+								
+								<button type='submit' class="form_btn">Enter</button>
+                    </form>
 								<script src='./scripts/signin.js' type="module"></script>
 								<link rel='stylesheet' type='text/css' href='styles.css' />
 </body>

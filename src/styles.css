@@ -1,7 +1,63 @@
+button {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+}
+
 body {
+  font-family: Arial;
   background-color: yellow;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+input {
+  width: 100%;
+  border: 1px solid rgb(12, 12, 8);
+  display: block;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.form {
+  background-color: rgb(249, 249, 245);
+  display: flex;
+  flex: 0 1 500px;
+  flex-direction: column;
+  padding: 75px;
+}
+
+.form_title{
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form_item{
+  margin-bottom: 16px;
+}
+
+.form_btn{
+  background-color: rgb(35, 175, 25);
+  color:blue;
+  padding: 20px 30px;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+
+.form_btn:hover{
+  background-color: rgb(20, 150, 15);
+}
+
+.img {
+  float: right;
+  margin: 0 0 5px 5px;
 }

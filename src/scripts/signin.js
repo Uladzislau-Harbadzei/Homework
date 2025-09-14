@@ -1,31 +1,35 @@
-const form = document.getElementById(".registerForm");
-const email = form.getElementById(".email");
-const password = form.getElementById(".password");
-const emailError = form.getElementById(".emailError");
-
-email.addEventListener("input", function (event) {
-  if (email.validity.valid) {
-    emailError.textContent = "";
-    emailError.className = "error";
-  } else {
-    showError();
-  }
-});
-
-form.addEventListener("submit", function (event) {
-  if (!email.validity.valid) {
-    showError();
+document.getElementById('form').addEventListener('submit', function(event){
     event.preventDefault();
-  }
-});
+    let isValid = true;
+    let name = document.getElementById('name');
+    let email = document.getElementById('email');
+    let password = document.getElementById('password');
 
-function showError() {
-  if (email.validity.valueMissing) {
-    emailError.textContent = "You need to enter an e-mail address.";
-  } else if (email.validity.typeMismatch) {
-    emailError.textContent = "Entered value needs to be an e-mail address.";
-  } else if (email.validity.tooShort) {
-    emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
-  }
-  emailError.className = "error active";
-}
+    const clearErrors = () => {
+        document.querySelectorAll('.error-text').forEach(error => error.remove());
+    };
+
+    const errorForm = (message, input)=>{
+        let errorEl = document.createElement('div');
+        errorEl.classname = 'errortext';
+        errorEl.textContent = message;
+        errorEl.style.color = 'red';
+        errorEl.style.fontSize = '14px';
+        input.parentElement.appendChild(errorEl);
+        isValid = false
+    };
+    
+    clearErrors();
+
+    if(!name.value.trim()) errorForm('Enter name', name);
+
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) errorForm('Enter correct email',email);
+    
+    if(!password.value.trim().lenth < 6) errorForm('The password must be at least 6 characters long.', password);
+
+    if(isValid){
+        console.log('The form has been successfully submitted');
+        document.getElementById('form').reset();
+    }
+})
+
