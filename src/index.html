@@ -16,14 +16,19 @@
 				    <div class ="form_item">
 					<label for="name" class="form_label">Name:</label>
                     <input type="text" id="name" autocomplete="off" class="form_input">
+                    <div id="name_error" class="errortext"></div>
                     </div>
                     <div class ="form_item">
 					<label for="email" class="form_label">Email:</label>
                     <input type="email" id="email" autocomplete="off" class="form_input">
+                    <div id="email_error" class="errortext"></div>
+                    </div>
                     </div>
                     <div class ="form_item">
 					<label for="password" class="form_label">Password:</label>
                     <input type="password" id="password" autocomplete="off" class="form_input">
+                    <div id="password_error" class="errortext"></div>
+                    </div>
                     </div>
                     
                     <div>
@@ -60,10 +65,6 @@
                         <option value='2025'>2025</option>
                         </select>
                     </div>
-                    <div>
-                        <h5 class="form_title" >Favorite Dinosaur</h5>
-                        <textarea placeholder='Name your favorite dinosaur'></textarea>
-                    </div>
 					<div>
 						<label>Sex</label>
 						<input id="radio" type='radio' name='sex' value='0'/> Man
@@ -78,7 +79,10 @@
 								<label  class="label">Load photo</label>
 								<input type='file' name='avatar'/>
                             </div>
-                        
+                        <div>
+                        <h5 class="form_title" >Favorite Dinosaur</h5>
+                        <textarea placeholder='Name your favorite dinosaur'></textarea>
+                    </div>
 								
 								<button type='submit' class="form_btn">Enter</button>
                     </form>

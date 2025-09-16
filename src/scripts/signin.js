@@ -1,35 +1,45 @@
-document.getElementById('form').addEventListener('submit', function(event){
-    event.preventDefault();
     let isValid = true;
-    let name = document.getElementById('name');
+    let username = document.getElementById('name');
     let email = document.getElementById('email');
     let password = document.getElementById('password');
+    let name_error = document.getElementById('name_error');
+    let email_error = document.getElementById('email_error');
+    let password_error = document.getElementById('password_error');
 
     const clearErrors = () => {
-        document.querySelectorAll('.error-text').forEach(error => error.remove());
+        Array.from(document.querySelectorAll('.errortext')).forEach(element => element.textContent = '');
+        };
+
+    const setError = (texterror, element) => {
+        element.textContent = texterror
     };
 
-    const errorForm = (message, input)=>{
-        let errorEl = document.createElement('div');
-        errorEl.classname = 'errortext';
-        errorEl.textContent = message;
-        errorEl.style.color = 'red';
-        errorEl.style.fontSize = '14px';
-        input.parentElement.appendChild(errorEl);
-        isValid = false
-    };
-    
+document.getElementById('form').addEventListener('submit', function(event){
+    event.preventDefault();
+
     clearErrors();
 
-    if(!name.value.trim()) errorForm('Enter name', name);
+    isValid = true;
 
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) errorForm('Enter correct email',email);
-    
-    if(!password.value.trim().lenth < 6) errorForm('The password must be at least 6 characters long.', password);
+    if(!username.value.trim()){ 
+        setError('Enter name', name_error);
+        isValid = false;
+    }
+
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){ 
+        setError('Enter correct email',email_error);
+        isValid = false;
+    }
+
+    if(password.value.trim().length < 6){ 
+        setError('The password must be at least 6 characters long.', password_error);
+        isValid = false;
+    }
 
     if(isValid){
         console.log('The form has been successfully submitted');
         document.getElementById('form').reset();
+        window.location.href = '/src/page2.html'
     }
 })
 
