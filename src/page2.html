@@ -1,51 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>PAGE 2</h1>
-    <p>lorem <b>ipsum</b> <i>ipsum</i> <u>ipsum</u> ipsum</p>
+
+ <div id="box">
+        <form name="forma">
+          <div class="item">
+            <h5>Start Task Date</h5>
+            <input type="text" id="start" class="form_input" placeholder="Enter Start Task Date">
+          </div>
+          <div class="form_item">
+            <h5>Finish Task Date</h5>
+            <input type="text" id="finish" class="form_input" placeholder="Enter Finish Task Date">
+          </div>
+          <div class="form_item">
+            <h5>Task Name</h5>
+            <input type="text" id="taskname" class="form_input" placeholder="Enter Task Name">
+          </div>
+          <div class="form_item">
+            <h5>Completed</h5>
+            <input type="text" id="taskcomp" class="form_input" placeholder="Enter">
+          </div>
+          <div class="form_item">
+            <input type="button" id="btn" value="SAVE">
+          </div>
+        </form>
+      <div>
+        <table class="table">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Start Task Date</th>
+              <th scope="col">Finish Task Date</th>
+              <th scope="col">Task Name</th>
+              <th scope="col">Task Completed</th>
+            </tr>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
     </div>
-    <div>
-    <ul>
-        <li>lorem ipsum</li>
-        <li>lorem ipsum</li>
-        <li>lorem ipsum</li>
-        <li>lorem ipsum</li>
-        <li>lorem ipsum</li>
-    </ul>
-    </div>
-    <div>
-    <ol>
-        <li>lorem ipsum</li>
-        <li>lorem ipsum</li>
-        <li>lorem ipsum</li>
-        <li>lorem ipsum</li>
-        <li>lorem ipsum</li>
-    </ol>
-    </div>
-    <div>
-    <table border='1' width='40%' height='50px'>
-        <tr>
-            <td colspan='2' align='center'>header</td>
-        </tr>
-        <tr>
-            <td rowspan='2'>menu</td>
-            <td>article</td>
-        </tr>
-        <tr>
-            <td>article 2</td>
-        </tr>
-        <tr>
-            <td colspan='2' aligh='center'>footer</td>
-        </tr>
-    </table>
-    </div>
-    <h2>HOME PAGE</h2>
-    <h3>HOME PAGE</h3>
-    <link rel='stylesheet' type='text/css' href='styles.css'/>
-</body>
-</html>
+<script src='./scripts/test.js' type="module"></script>
+<link rel='stylesheet' type='text/css' href='styles1.css' />
