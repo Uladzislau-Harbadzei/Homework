@@ -6,6 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
+    .form_item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .form_label{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .form_input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 	</style>
 </head>
 <a href='index.html'><img src='images/scale_1200.png' width='700' title='angry dino' class="img"/></a>
@@ -29,13 +46,12 @@
                     <input type="password" id="password" autocomplete="off" class="form_input">
                     <div id="password_error" class="errortext"></div>
                     </div>
-                    </div>
                     
                     <div>
                     <label>Year of birth:</label>
                     </div>
                     <div>
-                    <select class='yearOfBirth field'>
+                    <select class='yearOfBirth'>
                         <option></option>
                         <option value='2000'>2000</option>
                         <option value='2001'>2001</option>
