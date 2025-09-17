@@ -1,11 +1,77 @@
-box {
+body {
+  font-family: Arial;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
   margin-top: 70px;
 }
 
-.item {
-  margin: 5px 0;
+.form_title{
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-#blockTwo {
-  padding-top: 30px;
+.form_btn{
+  background-color: rgb(35, 175, 25);
+  color:blue;
+  padding: 20px 30px;
+  align-self: center;
+  transition: background-color 0.3s;
 }
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 1%;
+}
+
+thead th:nth-child(2) {
+  width: 10%;
+}
+
+thead th:nth-child(3) {
+  width: 10%;
+}
+
+thead th:nth-child(4) {
+  width: 40%;
+}
+
+thead th:nth-child(5) {
+  width: 10%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+td,
+th {
+  border: 1px solid gray;
+  padding: 15px 40px;
+}
+
+thead {
+  max-width: 200px;
+}
+
+tbody {
+  min-width: 300px;
+}
+
+.form_item{clear:both; text-align:right; line-height:25px;}
+
+label {float:left; padding-right:10px;}
+
+.main {float:left}

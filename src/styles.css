@@ -7,7 +7,7 @@ button {
 body {
   font-family: Arial;
   background-color: yellow;
-  display: flex;
+  display: center;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -23,13 +23,12 @@ input {
 }
 
 label {
-  font-weight: 700;
+  font-weight: 500;
   display: block;
   margin-bottom: 3px;
 }
 
 .form {
-  background-color: rgb(233, 233, 12);
   display: flex;
   flex: 0 1 500px;
   flex-direction: column;
@@ -57,7 +56,16 @@ label {
   background-color: rgb(20, 150, 15);
 }
 
-.img {
-  float: right;
-  margin: 0 0 5px 5px;
+img {
+  position: center;
+  margin: auto;
+}
+
+.errortext {
+  color: red;
+}
+
+.form_input {
+display: flex;
+justify-content: right;
 }
