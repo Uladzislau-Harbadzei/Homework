@@ -6,23 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<style>
-    .form_item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .form_label{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .form_input{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
 	</style>
 </head>
 <a href='index.html'><img src='images/scale_1200.png' width='700' title='angry dino' class="img"/></a>
@@ -30,6 +13,7 @@
 	<div>
 			<form action="#" id = "form" class="form">
                 <h1 class="form_title" >REGISTRATION</h1>
+                <div class="main">
 				    <div class ="form_item">
 					<label for="name" class="form_label">Name:</label>
                     <input type="text" id="name" autocomplete="off" class="form_input">
@@ -46,11 +30,8 @@
                     <input type="password" id="password" autocomplete="off" class="form_input">
                     <div id="password_error" class="errortext"></div>
                     </div>
-                    
-                    <div>
-                    <label>Year of birth:</label>
-                    </div>
-                    <div>
+                    <div class ="form_item">
+                    <label for="yearOfBirth'" class="form_label">Year of birth:</label>
                     <select class='yearOfBirth'>
                         <option></option>
                         <option value='2000'>2000</option>
@@ -81,16 +62,17 @@
                         <option value='2025'>2025</option>
                         </select>
                     </div>
-					<div>
-						<label>Sex</label>
-						<input id="radio" type='radio' name='sex' value='0'/> Man
-						<input id="radio" type='radio' name='sex' value='1'/> Woman
-						<input id="radio" type='radio' name='sex' value='1'/> Dinosaur
-                    </div>
-						<div>
-							<label  class="label">I agree with the rules</label>
+					<div class ="form_item">
+						<label for="radio" class="form_label">Sex</label>
+						<input type="radio" id="radio" type='radio' name='sex' value='0' /> Man
+						<input type="radio" id="radio" type='radio' name='sex' value='1'/> Woman
+						<input type="radio" id="radio" type='radio' name='sex' value='1'/> Dinosaur
+                    </div>    
+						<div class ="form_item">
+							<label for="checkbox" class="form_label">I agree with the rules</label>
 							<input id="checkbox" type='checkbox' name='rules' required/>
                     </div>
+            </div>        
 							<div>
 								<label  class="label">Load photo</label>
 								<input type='file' name='avatar'/>
@@ -99,6 +81,7 @@
                         <h5 class="form_title" >Favorite Dinosaur</h5>
                         <textarea placeholder='Name your favorite dinosaur'></textarea>
                     </div>
+                    
 								
 								<button type='submit' class="form_btn">Enter</button>
                     </form>
