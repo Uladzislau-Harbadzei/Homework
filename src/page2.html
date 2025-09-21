@@ -1,38 +1,58 @@
-<div id="box">
-        <form name="forma">
-            <h1 class="form_title" >TABLE</h1>
-            <div class="main">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles1.css" />
+  </head>
+  <body>
+    <div id="box">
+      <form name="forma">
+        <h1 class="form_title">TABLE</h1>
+        <div class="main">
           <div class="form_item">
             <label for="start">Start Task Date</label>
-            <input type="date" id="start" class="form_input" placeholder="Enter Start Task Date">
+            <input type="date" id="start" class="form_input" placeholder="Enter Start Task Date" />
           </div>
           <div class="form_item">
             <label for="finish">Finish Task Date</label>
-            <input type="date" id="finish" class="form_input" placeholder="Enter Finish Task Date">
+            <input
+              type="date"
+              id="finish"
+              class="form_input"
+              placeholder="Enter Finish Task Date"
+            />
           </div>
           <div class="form_item">
             <label for="taskname">Task Name</label>
-            <input type="text" id="taskname" class="form_input" placeholder="Enter Task Name">
+            <input type="text" id="taskname" class="form_input" placeholder="Enter Task Name" />
           </div>
           <div class="form_item">
             <label for="taskcomp">Status</label>
-            <input type="text" id="taskcomp" class="form_input" list="taskcomps" placeholder="Enter Status">
-            <datalist id='taskcomps'>
-                        <option></option>
-                        <option value='Not Started'>Not Started</option>
-                        <option value='In Progress'>In Progress</option>
-                        <option value='Done'>Done</option>
-                        <option value='Failed'>Failed</option>
-                        </datalist>
+            <input
+              type="text"
+              id="taskcomp"
+              class="form_input"
+              list="taskcomps"
+              placeholder="Enter Status"
+            />
+            <datalist id="taskcomps">
+              <option></option>
+              <option value="Not Started">Not Started</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Done">Done</option>
+              <option value="Failed">Failed</option>
+            </datalist>
           </div>
           <div class="form_item">
-            <input type="button" id="btn" class="form_btn" value="SAVE">
+            <input type="button" id="btn" class="form_btn" value="SAVE" />
           </div>
-          </div>
-        </form>
+        </div>
+      </form>
       <div>
         <table class="table table-bordered">
-            <thead>
+          <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Start Task Date</th>
@@ -40,10 +60,11 @@
               <th scope="col">Task Name</th>
               <th scope="col">Task Completed</th>
             </tr>
-            </thead>
+          </thead>
           <tbody id="tbody"></tbody>
         </table>
       </div>
     </div>
-<script src='./scripts/test.js' type="module"></script>
-<link rel='stylesheet' type='text/css' href='styles1.css' />
+    <script src="./scripts/test.js" type="module"></script>
+  </body>
+</html>

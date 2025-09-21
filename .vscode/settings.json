@@ -1,0 +1,18 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+
+  "eslint.validate": ["javascript", "html"],
+  "files.associations": {
+  ".husky/*": "shellscript"
+},
+  "stylelint.stylelintPath": "node_modules/stylelint",
+  "stylelint.useLocal": true,
+  "stylelint.configFile": ".stylelintrc.cjs",
+  "css.validate": false
+}

@@ -1,7 +1,6 @@
 body {
-  font-family: Arial;
+  font-family: Arial, sans-serif;
   background-color: yellow;
-  display: center;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -11,8 +10,7 @@ input {
   width: 80%;
   height: 20px;
   margin-bottom: 10px;
-  border: 1px solid rgb(12, 12, 8);
-  display: left;
+  border: 1px solid;
   border-radius: 5px;
   font-size: 16px;
   padding: 10px;
@@ -25,29 +23,35 @@ input {
   padding: 75px;
 }
 
-.form_item{clear:both; text-align:right; line-height:25px;}
+.form_item {
+  clear: both;
+  text-align: right;
+  line-height: 25px;
+}
 
-label {float:left; padding-right:10px;}
+label {
+  float: left;
+  padding-right: 10px;
+}
 
-.form_title{
+.form_title {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.form_btn{
-  background-color: rgb(35, 175, 25);
-  color:blue;
+.form_btn {
+  background-color: rgb(35 175 25);
+  color: blue;
   padding: 20px 30px;
   align-self: center;
   transition: background-color 0.3s;
   border-radius: 20px;
 }
 
-.form_btn:hover{
-  background-color: rgb(20, 150, 15);
+.form_btn:hover {
+  background-color: rgb(20 150 15);
 }
 
 .errortext {
   color: red;
 }
-
