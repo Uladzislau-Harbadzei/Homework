@@ -41,6 +41,7 @@ label {float:left; padding-right:10px;}
   align-self: center;
   transition: background-color 0.3s;
   border-radius: 20px;
+  margin: auto 0px auto auto;
 }
 
 .form_btn:hover{
