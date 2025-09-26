@@ -14,6 +14,7 @@
           <div class="form_item">
             <label for="start">Start Task Date</label>
             <input type="date" id="start" class="form_input" placeholder="Enter Start Task Date" />
+            <div id="start_error" class="errortext"></div>
           </div>
           <div class="form_item">
             <label for="finish">Finish Task Date</label>
@@ -23,20 +24,23 @@
               class="form_input"
               placeholder="Enter Finish Task Date"
             />
+            <div id="finish_error" class="errortext"></div>
           </div>
           <div class="form_item">
             <label for="taskname">Task Name</label>
             <input type="text" id="taskname" class="form_input" placeholder="Enter Task Name" />
+            <div id="taskname_error" class="errortext"></div>
           </div>
           <div class="form_item">
-            <label for="taskcomp">Status</label>
+            <label for="comp">Status</label>
             <input
               type="text"
-              id="taskcomp"
+              id="comp"
               class="form_input"
               list="taskcomps"
               placeholder="Enter Status"
             />
+            <div id="comp_error" class="errortext"></div>
             <datalist id="taskcomps">
               <option></option>
               <option value="Not Started">Not Started</option>
@@ -51,7 +55,7 @@
         </div>
       </form>
       <div>
-        <table class="table table-bordered">
+        <table id="table" class="table table-bordered">
           <thead>
             <tr>
               <th scope="col">#</th>

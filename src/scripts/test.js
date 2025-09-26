@@ -2,19 +2,88 @@ let start = document.getElementById('start');
 let finish = document.getElementById('finish');
 let taskname = document.getElementById('taskname');
 let comp = document.getElementById('comp');
-let f1 = document.forms['forma'];
-let tbody = document.getElementById('tbody');
-let tasks = [];
+//let f1 = document.forms['forma'];
+//let tbody = document.getElementById('tbody');
+//let tasks = [];
+let isValid = true;
+let start_error = document.getElementById('start_error');
+let finish_error = document.getElementById('finish_error');
+let taskname_error = document.getElementById('taskname_error');
+let comp_error = document.getElementById('comp_error');
 
-let getId = (id) => document.getElementById(id);
+//let getId = (id) => document.getElementById(id);
+
+const clearErrors = () => {
+  Array.from(document.querySelectorAll('.errortext')).forEach(
+    (element) => (element.textContent = '')
+  );
+};
+
+const setError = (texterror, element) => {
+  element.textContent = texterror;
+};
+
+document.getElementById('forma').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  clearErrors();
+
+  isValid = true;
+
+  if (!start.value.trim()) {
+    setError('Enter Start Date', start_error);
+    isValid = false;
+  }
+
+  if (!finish.value.trim()) {
+    setError('Enter Finish Date', finish_error);
+    isValid = false;
+  }
+
+  if (!taskname.value.trim()) {
+    setError('Enter Task Name', taskname_error);
+    isValid = false;
+  }
+
+  if (!comp.value.trim()) {
+    setError('Enter Status', comp_error);
+    isValid = false;
+  }
+
+  if (isValid) {
+    console.log('The form has been successfully submitted');
+    document.getElementById('form').reset();
+    window.location.href = 'table';
+  }
+
+  const table = document.createElement('table');
+
+  table.innerHTML = `
+    <thead>
+        <tr>
+            <th colspan="2">The table header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Start</td>
+            <td>Finish</td>
+            <td>Taskname</td>
+            <td>Status</td>
+        </tr>
+    </tbody>
+`;
+
+  document.body.appendChild(table);
+});
 
 // а зачем здесь функция-конструктор???
-function Task(taskStart, taskFinish, taskName, taskComp) {
-  this.taskStart = taskStart;
-  this.taskFinish = taskFinish;
-  this.taskName = taskName;
-  this.taskComp = taskComp;
-}
+// function Task(taskStart, taskFinish, taskName, taskComp) {
+// this.taskStart = taskStart;
+// this.taskFinish = taskFinish;
+//  this.taskName = taskName;
+//  this.taskComp = taskComp;
+//}
 // btn.onclick = function () {
 //   let taskStart = start.value;
 //   let taskFinish = finish.value;
