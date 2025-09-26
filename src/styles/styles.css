@@ -55,3 +55,11 @@ label {
 .errortext {
   color: red;
 }
+
+.form_img {
+  clear: both;
+  text-align: right;
+  line-height: 25px;
+  justify-content: center;
+  display: flex;
+}
