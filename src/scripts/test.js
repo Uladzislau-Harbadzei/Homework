@@ -2,7 +2,8 @@ let start = document.getElementById('start');
 let finish = document.getElementById('finish');
 let taskname = document.getElementById('taskname');
 let comp = document.getElementById('comp');
-//let f1 = document.forms['forma'];
+const f1 = document.getElementById('forma');
+const table = document.getElementById('table');
 //let tbody = document.getElementById('tbody');
 //let tasks = [];
 let isValid = true;
@@ -52,29 +53,20 @@ document.getElementById('forma').addEventListener('submit', function (event) {
 
   if (isValid) {
     console.log('The form has been successfully submitted');
-    document.getElementById('form').reset();
+    document.getElementById('forma').reset();
     window.location.href = 'table';
+
+    const newRowHtml = `
+        <tr>
+            <th>${start}</th>
+            <td>${finish}</td>
+            <td>${taskname}</td>
+            <td>${comp}</td>
+        </tr>
+    `;
+    table.innerHTML += newRowHtml;
+    f1.reset();
   }
-
-  const table = document.createElement('table');
-
-  table.innerHTML = `
-    <thead>
-        <tr>
-            <th colspan="2">The table header</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Start</td>
-            <td>Finish</td>
-            <td>Taskname</td>
-            <td>Status</td>
-        </tr>
-    </tbody>
-`;
-
-  document.body.appendChild(table);
 });
 
 // а зачем здесь функция-конструктор???
