@@ -2,16 +2,16 @@ let start = document.getElementById('start');
 let finish = document.getElementById('finish');
 let taskname = document.getElementById('taskname');
 let comp = document.getElementById('comp');
-let f1 = document.forms['forma'];
-let tbody = document.getElementById('tbody');
-let tasks = [];
+//let f1 = document.forms['forma'];
+//let tbody = document.getElementById('tbody');
+//let tasks = [];
 let isValid = true;
 let start_error = document.getElementById('start_error');
 let finish_error = document.getElementById('finish_error');
 let taskname_error = document.getElementById('taskname_error');
 let comp_error = document.getElementById('comp_error');
 
-let getId = (id) => document.getElementById(id);
+//let getId = (id) => document.getElementById(id);
 
 const clearErrors = () => {
   Array.from(document.querySelectorAll('.errortext')).forEach(
