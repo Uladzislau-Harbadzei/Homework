@@ -23,6 +23,10 @@ input {
   padding: 75px;
 }
 
+.form input {
+  display: flex;
+}
+
 .form_item {
   clear: both;
   text-align: right;
