@@ -2,9 +2,8 @@ let start = document.getElementById('start');
 let finish = document.getElementById('finish');
 let taskname = document.getElementById('taskname');
 let comp = document.getElementById('comp');
-const f1 = document.getElementById('forma');
+const form = document.getElementById('form');
 const table = document.getElementById('table');
-//let tbody = document.getElementById('tbody');
 //let tasks = [];
 let isValid = true;
 let start_error = document.getElementById('start_error');
@@ -24,9 +23,7 @@ const setError = (texterror, element) => {
   element.textContent = texterror;
 };
 
-document.getElementById('forma').addEventListener('submit', function (event) {
-  event.preventDefault();
-
+document.getElementById('createTask').addEventListener('click', function () {
   clearErrors();
 
   isValid = true;
@@ -52,20 +49,20 @@ document.getElementById('forma').addEventListener('submit', function (event) {
   }
 
   if (isValid) {
-    console.log('The form has been successfully submitted');
-    document.getElementById('forma').reset();
-    window.location.href = 'table';
+    let tbody = document.getElementById('tbody');
+    const rowsCount = tbody.querySelectorAll('tr').length || 0;
 
     const newRowHtml = `
         <tr>
-            <th>${start}</th>
-            <td>${finish}</td>
-            <td>${taskname}</td>
-            <td>${comp}</td>
+            <td>${rowsCount + 1}</td>
+            <td>${start.value}</td>
+            <td>${finish.value}</td>
+            <td>${taskname.value}</td>
+            <td>${comp.value}</td>
         </tr>
     `;
-    table.innerHTML += newRowHtml;
-    f1.reset();
+    tbody.innerHTML += newRowHtml;
+    form.reset();
   }
 });
 
