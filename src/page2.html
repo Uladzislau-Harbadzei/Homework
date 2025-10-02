@@ -52,8 +52,14 @@
           <div class="form_item">
             <input type="button" id="createTask" class="form_btn" value="SAVE" />
           </div>
+          <div class="form_item">
+            <input type="button" id="removeTask" class="form_btn" value="REMOVE" />
+          </div>
         </div>
       </form>
+      <div>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Find..." />
+      </div>
       <div>
         <table id="table" class="table table-bordered">
           <thead>
@@ -63,6 +69,7 @@
               <th scope="col">Finish Task Date</th>
               <th scope="col">Task Name</th>
               <th scope="col">Task Completed</th>
+              <th scope="col">Remove</th>
             </tr>
           </thead>
           <tbody id="tbody"></tbody>
