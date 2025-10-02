@@ -59,6 +59,10 @@ thead th:nth-child(5) {
   width: 10%;
 }
 
+thead th:nth-child(6) {
+  width: 3%;
+}
+
 thead {
   max-width: 200px;
 }
@@ -80,4 +84,12 @@ label {
 
 .main {
   float: left;
+}
+
+.myinput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
 }

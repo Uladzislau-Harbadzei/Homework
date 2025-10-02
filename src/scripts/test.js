@@ -2,16 +2,15 @@ let start = document.getElementById('start');
 let finish = document.getElementById('finish');
 let taskname = document.getElementById('taskname');
 let comp = document.getElementById('comp');
+let removeTask = document.getElementById('removeTask');
 const form = document.getElementById('form');
 const table = document.getElementById('table');
-//let tasks = [];
 let isValid = true;
 let start_error = document.getElementById('start_error');
 let finish_error = document.getElementById('finish_error');
 let taskname_error = document.getElementById('taskname_error');
 let comp_error = document.getElementById('comp_error');
-
-//let getId = (id) => document.getElementById(id);
+let myInput = document.getElementById('myInput');
 
 const clearErrors = () => {
   Array.from(document.querySelectorAll('.errortext')).forEach(
@@ -51,6 +50,7 @@ document.getElementById('createTask').addEventListener('click', function () {
   if (isValid) {
     let tbody = document.getElementById('tbody');
     const rowsCount = tbody.querySelectorAll('tr').length || 0;
+    const remove = tbody.querySelectorAll('tr');
 
     const newRowHtml = `
         <tr>
@@ -59,6 +59,7 @@ document.getElementById('createTask').addEventListener('click', function () {
             <td>${finish.value}</td>
             <td>${taskname.value}</td>
             <td>${comp.value}</td>
+            <td>${removeTask.value}</td>
         </tr>
     `;
     tbody.innerHTML += newRowHtml;
@@ -66,38 +67,23 @@ document.getElementById('createTask').addEventListener('click', function () {
   }
 });
 
-// а зачем здесь функция-конструктор???
-// function Task(taskStart, taskFinish, taskName, taskComp) {
-// this.taskStart = taskStart;
-// this.taskFinish = taskFinish;
-//  this.taskName = taskName;
-//  this.taskComp = taskComp;
-//}
-// btn.onclick = function () {
-//   let taskStart = start.value;
-//   let taskFinish = finish.value;
-//   let taskName = taskname.value;
-//   let taskComp = taskcomp.value;
-//   const newTask = new Task(taskStart, taskFinish, taskName, taskComp);
-//   f1.reset();
-//   tasks.push(newTask);
+document.getElementById('removeTask').addEventListener('click', function deleteRow(el) {
+  if (!confirm('Are you sure you want to delete?')) return;
 
-//   let td;
-//   let tr = document.createElement('tr');
-//   getId('tbody').appendChild(tr);
-//   td = document.createElement('td');
-//   tr.appendChild(td);
-//   td.textContent = tasks.length;
-//   td = document.createElement('td');
-//   tr.appendChild(td);
-//   td.textContent = newTask.taskStart;
-//   td = document.createElement('td');
-//   tr.appendChild(td);
-//   td.textContent = newTask.taskFinish;
-//   td = document.createElement('td');
-//   tr.appendChild(td);
-//   td.textContent = newTask.taskName;
-//   td = document.createElement('td');
-//   tr.appendChild(td);
-//   td.textContent = newTask.taskComp;
-// };
+  let tbl = el.parentNode.parentNode.parentNode;
+  let row = el.parentNode.parentNode.rowIndex;
+
+  tbl.deleteRow(row);
+});
+document.getElementById('myInput');
+myInput.addEventListener('keyup', function () {
+  let filter = myInput.value.toLowerCase(),
+    filterItems = document.querySelectorAll('#list li');
+  filterItems.forEach((item) => {
+    if (item.innerHTML.toLowerCase().indexOf(filter) > -1) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+});
