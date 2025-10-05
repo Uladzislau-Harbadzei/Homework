@@ -2,7 +2,6 @@ let start = document.getElementById('start');
 let finish = document.getElementById('finish');
 let taskname = document.getElementById('taskname');
 let comp = document.getElementById('comp');
-let removeTask = document.getElementById('removeTask');
 const form = document.getElementById('form');
 const table = document.getElementById('table');
 let isValid = true;
@@ -10,7 +9,6 @@ let start_error = document.getElementById('start_error');
 let finish_error = document.getElementById('finish_error');
 let taskname_error = document.getElementById('taskname_error');
 let comp_error = document.getElementById('comp_error');
-let myInput = document.getElementById('myInput');
 
 const clearErrors = () => {
   Array.from(document.querySelectorAll('.errortext')).forEach(
@@ -50,40 +48,33 @@ document.getElementById('createTask').addEventListener('click', function () {
   if (isValid) {
     let tbody = document.getElementById('tbody');
     const rowsCount = tbody.querySelectorAll('tr').length || 0;
-    const remove = tbody.querySelectorAll('tr');
+
+    let task = taskname.value;
+    let trname = `${task}_tr`;
 
     const newRowHtml = `
-        <tr>
+        <tr id=${trname}>
             <td>${rowsCount + 1}</td>
             <td>${start.value}</td>
             <td>${finish.value}</td>
-            <td>${taskname.value}</td>
+            <td data-task=${task}>${task}</td>
             <td>${comp.value}</td>
-            <td>${removeTask.value}</td>
+            <td><button id=${task}>remove</button></td>
         </tr>
     `;
     tbody.innerHTML += newRowHtml;
+
+    document.getElementById(task).addEventListener('click', function (event) {
+      if (!confirm('Are you sure you want to delete?')) return;
+      const target = event.target;
+      const tableRow = tbody.querySelector(`#${target.id}_tr`);
+      tableRow.remove();
+      //let tbl = event.parentNode.parentNode.parentNode;
+      //let row = event.parentNode.parentNode.rowIndex;
+
+      //tbl.deleteRow(row);
+    });
+
     form.reset();
   }
-});
-
-document.getElementById('removeTask').addEventListener('click', function deleteRow(el) {
-  if (!confirm('Are you sure you want to delete?')) return;
-
-  let tbl = el.parentNode.parentNode.parentNode;
-  let row = el.parentNode.parentNode.rowIndex;
-
-  tbl.deleteRow(row);
-});
-document.getElementById('myInput');
-myInput.addEventListener('keyup', function () {
-  let filter = myInput.value.toLowerCase(),
-    filterItems = document.querySelectorAll('#list li');
-  filterItems.forEach((item) => {
-    if (item.innerHTML.toLowerCase().indexOf(filter) > -1) {
-      item.style.display = '';
-    } else {
-      item.style.display = 'none';
-    }
-  });
 });
