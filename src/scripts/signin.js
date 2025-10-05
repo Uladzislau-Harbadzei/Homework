@@ -40,7 +40,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
   if (isValid) {
     console.log('The form has been successfully submitted');
+    window.location.href = `/src/page2.html?username=${username.value}`;
     document.getElementById('form').reset();
-    window.location.href = '/src/page2.html';
   }
 });
