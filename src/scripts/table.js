@@ -37,6 +37,7 @@ document.getElementById('createTask').addEventListener('click', function () {
 
   if (!taskname.value.trim()) {
     setError('Enter Task Name', taskname_error);
+    
     isValid = false;
   }
 
@@ -45,12 +46,28 @@ document.getElementById('createTask').addEventListener('click', function () {
     isValid = false;
   }
 
+  const elems = table.querySelectorAll('[data-task]');
+  const taskNames = [];
+
+  const arrElems = Array.from(elems);
+
+  arrElems.forEach(elem => {
+    const value = elem.getAttribute('data-task');
+
+    
+  })
+
+  
+
   if (isValid) {
     let tbody = document.getElementById('tbody');
     const rowsCount = tbody.querySelectorAll('tr').length || 0;
 
     let task = taskname.value;
     let trname = `${task}_tr`;
+
+    
+    
 
     const newRowHtml = `
         <tr id=${trname}>
@@ -59,7 +76,11 @@ document.getElementById('createTask').addEventListener('click', function () {
             <td>${finish.value}</td>
             <td data-task=${task}>${task}</td>
             <td>${comp.value}</td>
-            <td><button id=${task}>remove</button></td>
+            <td>
+              <button id=${task}>
+                <img src='' />
+              </button>
+            </td>
         </tr>
     `;
     tbody.innerHTML += newRowHtml;
