@@ -37,7 +37,7 @@ document.getElementById('createTask').addEventListener('click', function () {
 
   if (!taskname.value.trim()) {
     setError('Enter Task Name', taskname_error);
-    
+
     isValid = false;
   }
 
@@ -51,13 +51,9 @@ document.getElementById('createTask').addEventListener('click', function () {
 
   const arrElems = Array.from(elems);
 
-  arrElems.forEach(elem => {
+  arrElems.forEach((elem) => {
     const value = elem.getAttribute('data-task');
-
-    
-  })
-
-  
+  });
 
   if (isValid) {
     let tbody = document.getElementById('tbody');
@@ -65,9 +61,6 @@ document.getElementById('createTask').addEventListener('click', function () {
 
     let task = taskname.value;
     let trname = `${task}_tr`;
-
-    
-    
 
     const newRowHtml = `
         <tr id=${trname}>
@@ -78,7 +71,7 @@ document.getElementById('createTask').addEventListener('click', function () {
             <td>${comp.value}</td>
             <td>
               <button id=${task}>
-                <img src='' />
+                <img src='iconstrash.png'/>
               </button>
             </td>
         </tr>
