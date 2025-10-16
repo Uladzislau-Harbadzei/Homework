@@ -83,10 +83,6 @@ document.getElementById('createTask').addEventListener('click', function () {
       const target = event.target;
       const tableRow = tbody.querySelector(`#${target.id}_tr`);
       tableRow.remove();
-      //let tbl = event.parentNode.parentNode.parentNode;
-      //let row = event.parentNode.parentNode.rowIndex;
-
-      //tbl.deleteRow(row);
     });
 
     form.reset();
