@@ -71,7 +71,7 @@ document.getElementById('createTask').addEventListener('click', function () {
             <td>${comp.value}</td>
             <td>
               <button id=${task}>
-                <img src='iconstrash.png'/>
+                <img src='./images/iconstrash.png'/>
               </button>
             </td>
         </tr>
