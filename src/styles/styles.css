@@ -33,6 +33,12 @@ input {
   line-height: 25px;
 }
 
+.year {
+  clear: both;
+  text-align: right;
+  line-height: 25px;
+}
+
 label {
   float: left;
   padding-right: 10px;
@@ -41,6 +47,12 @@ label {
 .form_title {
   margin-bottom: 20px;
   text-align: center;
+}
+
+.link {
+  margin-bottom: 20px;
+  text-align: center;
+  color: rgb(226 43 98);
 }
 
 .form_btn {
