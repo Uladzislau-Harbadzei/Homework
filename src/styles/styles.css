@@ -27,30 +27,25 @@ input {
   display: flex;
 }
 
-.year {
-  text-align: right;
-  line-height: 25px;
-}
-
 label {
   padding-right: 10px;
   width: 200px;
+  text-align: center;
+  align-items: center;
 }
 
 .form_title {
   margin-bottom: 20px;
-  text-align: left;
-  align-items: center;
 }
 
 .link {
   margin-bottom: 20px;
   text-align: center;
-  color: rgb(226 43 98);
+  color: rgb(43 195 226);
 }
 
 .link > a {
-  color: rgb(226 43 98);
+  color: rgb(43 195 226);
 }
 
 .form_btn {
@@ -86,4 +81,27 @@ label {
 
 .textarea {
   width: 100%;
+}
+
+.year {
+  display: flex;
+  text-align: right;
+  line-height: 25px;
+}
+
+.yearOfBirth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#radio {
+  display: flex;
+  text-align: right;
 }
