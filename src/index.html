@@ -23,8 +23,8 @@
     <div class="link">
       <a href="https://www.google.com">Find out anything else</a>
     </div>
+    <h1 class="form_title">REGISTRATION</h1>
     <form action="#" id="form" class="form">
-      <h1 class="form_title">REGISTRATION</h1>
       <div class="main">
         <div class="form_item">
           <label for="name" class="form_label">Name:</label>
@@ -44,7 +44,7 @@
       </div>
       <div class="form_item">
         <label for="yearOfBirth'" class="year">Year of birth:</label>
-        <select class="yearOfBirth">
+        <select name="yearOfBirth">
           <option></option>
           <option value="2000">2000</option>
           <option value="2001">2001</option>
@@ -88,9 +88,9 @@
         <label class="label">Load photo</label>
         <input type="file" name="avatar" />
       </div>
-      <div>
-        <h5 class="form_title">Favorite Dinosaur</h5>
-        <textarea placeholder="Name your favorite dinosaur"></textarea>
+      <div class="form_title">
+        <h5>Favorite Dinosaur</h5>
+        <textarea placeholder="Name your favorite dinosaur" class="textarea"></textarea>
       </div>
 
       <button type="submit" class="form_btn">Enter</button>

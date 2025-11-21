@@ -27,31 +27,29 @@ input {
   display: flex;
 }
 
-.form_item {
-  clear: both;
-  text-align: right;
-  line-height: 25px;
-}
-
 .year {
-  clear: both;
   text-align: right;
   line-height: 25px;
 }
 
 label {
-  float: left;
   padding-right: 10px;
+  width: 200px;
 }
 
 .form_title {
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
+  align-items: center;
 }
 
 .link {
   margin-bottom: 20px;
   text-align: center;
+  color: rgb(226 43 98);
+}
+
+.link > a {
   color: rgb(226 43 98);
 }
 
@@ -78,4 +76,14 @@ label {
   line-height: 25px;
   justify-content: center;
   display: flex;
+}
+
+.form_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textarea {
+  width: 100%;
 }
