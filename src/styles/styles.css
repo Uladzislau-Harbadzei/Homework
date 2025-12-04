@@ -6,8 +6,14 @@ body {
   height: 100vh;
 }
 
-input {
-  width: 80%;
+.form {
+  display: flex;
+  flex: 0 1 500px;
+  flex-direction: column;
+  padding: 75px;
+}
+
+.form_input {
   height: 20px;
   margin-bottom: 10px;
   border: 1px solid;
@@ -16,22 +22,16 @@ input {
   padding: 10px;
 }
 
-.form {
+.form_cont_input {
+  width: 80%;
+  margin-bottom: 10px;
   display: flex;
-  flex: 0 1 500px;
   flex-direction: column;
-  padding: 75px;
 }
 
-.form input {
-  display: flex;
-}
-
-label {
+.form_label {
   padding-right: 10px;
   width: 200px;
-  text-align: center;
-  align-items: center;
 }
 
 .form_title {
@@ -76,23 +76,11 @@ label {
 .form_item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .textarea {
   width: 100%;
-}
-
-.year {
-  display: flex;
-  text-align: right;
-  line-height: 25px;
-}
-
-.yearOfBirth {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .checkbox {
@@ -101,7 +89,7 @@ label {
   align-items: center;
 }
 
-#radio {
-  display: flex;
-  text-align: right;
+.form_select {
+  align-self: flex-start;
+  margin: auto auto auto 0;
 }

@@ -25,65 +25,67 @@
     </div>
     <h1 class="form_title">REGISTRATION</h1>
     <form action="#" id="form" class="form">
-      <div class="main">
+      <fieldset>
         <div class="form_item">
           <label for="name" class="form_label">Name:</label>
-          <input type="text" id="name" autocomplete="off" class="form_input" />
-          <div id="name_error" class="errortext"></div>
+          <div class="form_cont_input">
+            <input type="text" id="name" autocomplete="off" class="form_input" />
+            <div id="name_error" class="errortext"></div>
+          </div>
         </div>
         <div class="form_item">
           <label for="email" class="form_label">Email:</label>
           <input type="email" id="email" autocomplete="off" class="form_input" />
           <div id="email_error" class="errortext"></div>
         </div>
-      </div>
-      <div class="form_item">
-        <label for="password" class="form_label">Password:</label>
-        <input type="password" id="password" autocomplete="off" class="form_input" />
-        <div id="password_error" class="errortext"></div>
-      </div>
-      <div class="form_item">
-        <label for="yearOfBirth'" class="year">Year of birth:</label>
-        <select name="yearOfBirth">
-          <option></option>
-          <option value="2000">2000</option>
-          <option value="2001">2001</option>
-          <option value="2002">2002</option>
-          <option value="2003">2003</option>
-          <option value="2004">2004</option>
-          <option value="2005">2005</option>
-          <option value="2006">2006</option>
-          <option value="2007">2007</option>
-          <option value="2008">2008</option>
-          <option value="2009">2009</option>
-          <option value="2010">2010</option>
-          <option value="2011">2011</option>
-          <option value="2012">2012</option>
-          <option value="2013">2013</option>
-          <option value="2014">2014</option>
-          <option value="2015">2015</option>
-          <option value="2016">2016</option>
-          <option value="2017">2017</option>
-          <option value="2018">2018</option>
-          <option value="2019">2019</option>
-          <option value="2020">2020</option>
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-          <option value="2023">2023</option>
-          <option value="2024">2024</option>
-          <option value="2025">2025</option>
-        </select>
-      </div>
-      <div class="form_item">
-        <label for="radio" class="form_label">Sex</label>
-        <input type="radio" id="radio" name="sex" value="0" /> Man
-        <input type="radio" id="radio1" name="sex" value="1" /> Woman
-        <input type="radio" id="radio2" name="sex" value="2" /> Dinosaur
-      </div>
-      <div class="form_item">
-        <label for="checkbox" class="form_label">I agree with the rules</label>
-        <input id="checkbox" type="checkbox" name="rules" required />
-      </div>
+        <div class="form_item">
+          <label for="password" class="form_label">Password:</label>
+          <input type="password" id="password" autocomplete="off" class="form_input" />
+          <div id="password_error" class="errortext"></div>
+        </div>
+        <div class="form_item">
+          <label for="yearOfBirth'" class="form_label">Year of birth:</label>
+          <select name="yearOfBirth" class="form_select">
+            <option></option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+          </select>
+        </div>
+        <div class="form_item">
+          <label for="radio" class="form_label">Sex</label>
+          <input type="radio" id="radio" name="sex" value="0" /> Man
+          <input type="radio" id="radio1" name="sex" value="1" /> Woman
+          <input type="radio" id="radio2" name="sex" value="2" /> Dinosaur
+        </div>
+        <div class="form_item">
+          <label for="checkbox" class="form_label">I agree with the rules</label>
+          <input id="checkbox" type="checkbox" name="rules" required />
+        </div>
+      </fieldset>
       <div class="label">
         <label class="label">Load photo</label>
         <input type="file" name="avatar" />
