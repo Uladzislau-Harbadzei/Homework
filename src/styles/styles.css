@@ -29,6 +29,13 @@ body {
   flex-direction: column;
 }
 
+.form_control {
+  width: 80%;
+  margin-bottom: 10px;
+  display: inline;
+  flex-direction: column;
+}
+
 .form_label {
   padding-right: 10px;
   width: 200px;
@@ -36,6 +43,7 @@ body {
 
 .form_title {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .link {
@@ -92,4 +100,11 @@ body {
 .form_select {
   align-self: flex-start;
   margin: auto auto auto 0;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  accent-color: #c56fff;
+  width: 20px;
+  height: 20px;
 }

@@ -7,52 +7,67 @@
     <link rel="stylesheet" type="text/css" href="styles/styles1.css" />
   </head>
   <body>
-    <div id="box">
-      <h3 id="greeting"></h3>
+    <div class="form_item" id="box">
+      <h3 style="font-size: 45px" id="greeting"></h3>
       <form name="form" id="form">
-        <h1 class="form_title">TABLE</h1>
+        <h1 class="form_title">Welcome to the amazing dinosaur world!</h1>
         <div class="main">
-          <div class="form_item">
-            <label for="start">Start Task Date</label>
-            <input type="date" id="start" class="form_input" placeholder="Enter Start Task Date" />
-            <div id="start_error" class="errortext"></div>
-          </div>
-          <div class="form_item">
-            <label for="finish">Finish Task Date</label>
-            <input
-              type="date"
-              id="finish"
-              class="form_input"
-              placeholder="Enter Finish Task Date"
-            />
-            <div id="finish_error" class="errortext"></div>
-          </div>
-          <div class="form_item">
-            <label for="taskname">Task Name</label>
-            <input type="text" id="taskname" class="form_input" placeholder="Enter Task Name" />
-            <div id="taskname_error" class="errortext"></div>
-          </div>
-          <div class="form_item">
-            <label for="comp">Status</label>
-            <input
-              type="text"
-              id="comp"
-              class="form_input"
-              list="taskcomps"
-              placeholder="Enter Status"
-            />
-            <div id="comp_error" class="errortext"></div>
-            <datalist id="taskcomps">
-              <option></option>
-              <option value="Not Started">Not Started</option>
-              <option value="In Progress">In Progress</option>
-              <option value="Done">Done</option>
-              <option value="Failed">Failed</option>
-            </datalist>
-          </div>
-          <div class="form_item">
-            <input type="button" id="createTask" class="form_btn" value="SAVE" />
-          </div>
+          <fieldset>
+            <div class="form_item">
+              <label for="start">Start Task Date</label>
+              <div class="form_cont_input">
+                <input
+                  type="date"
+                  id="start"
+                  class="form_input"
+                  placeholder="Enter Start Task Date"
+                />
+                <div id="start_error" class="errortext"></div>
+              </div>
+            </div>
+            <div class="form_item">
+              <label for="finish">Finish Task Date</label>
+              <div class="form_cont_input">
+                <input
+                  type="date"
+                  id="finish"
+                  class="form_input"
+                  placeholder="Enter Finish Task Date"
+                />
+                <div id="finish_error" class="errortext"></div>
+              </div>
+            </div>
+            <div class="form_item">
+              <label for="taskname">Task Name</label>
+              <div class="form_cont_input">
+                <input type="text" id="taskname" class="form_input" placeholder="Enter Task Name" />
+                <div id="taskname_error" class="errortext"></div>
+              </div>
+            </div>
+            <div class="form_item">
+              <label for="comp">Status</label>
+              <div class="form_cont_input">
+                <input
+                  type="text"
+                  id="comp"
+                  class="form_input"
+                  list="taskcomps"
+                  placeholder="Enter Status"
+                />
+                <div id="comp_error" class="errortext"></div>
+                <datalist id="taskcomps">
+                  <option></option>
+                  <option value="Not Started">Not Started</option>
+                  <option value="In Progress">In Progress</option>
+                  <option value="Done">Done</option>
+                  <option value="Failed">Failed</option>
+                </datalist>
+              </div>
+            </div>
+            <div class="form_item">
+              <input type="button" id="createTask" class="form_btn" value="SAVE" />
+            </div>
+          </fieldset>
         </div>
       </form>
       <div>
