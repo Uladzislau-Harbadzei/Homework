@@ -114,3 +114,23 @@ label {
   display: flex;
   flex-direction: column;
 }
+
+.search-container {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.search-container input {
+  padding-left: 30px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
