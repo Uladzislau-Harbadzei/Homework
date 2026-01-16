@@ -116,10 +116,11 @@ label {
 }
 
 .search-container {
-  position: relative;
-  display: inline-block;
+  display: block;
   width: 20px;
   height: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-container input {
@@ -133,4 +134,44 @@ label {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* для узких экранов */
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image_block,
+.form_block {
+  width: 100%;
+}
+
+.image_block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Стили для широких экранов (от 768px и выше) */
+@media (width >= 768px) {
+  .container {
+    flex-direction: row; /* Выстраиваем в ряд */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .image_block {
+    flex: 1; /* Занимает 50% места */
+  }
+
+  .form_block {
+    flex: 1; /* Занимает 50% места */
+    padding-left: 40px;
+  }
 }

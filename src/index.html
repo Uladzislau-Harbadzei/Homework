@@ -8,105 +8,109 @@
     <link rel="icon" href="images/icons8-динозавр-50.png" />
   </head>
   <body>
-    <div class="form_img">
-      <a href="index.html">
-        <img
-          src="images/scale_1200.png"
-          width="500"
-          height="500"
-          title="angry dino"
-          class="img"
-          alt="Dinosaur"
-        />
-      </a>
-    </div>
-    <div class="search-container">
-      <a href="https://www.google.com">Find out anything else</a>
-    </div>
-    <h1 style="font-size: 45px" class="form_title">REGISTRATION</h1>
-    <form action="#" id="form" class="form">
-      <fieldset>
-        <div class="form_item">
-          <label for="name" class="form_label">Name:</label>
-          <div class="form_cont_input">
-            <input type="text" id="name" autocomplete="off" class="form_input" />
-            <div id="name_error" class="errortext"></div>
-          </div>
-        </div>
-        <div class="form_item">
-          <label for="email" class="form_label">Email:</label>
-          <div class="form_cont_input">
-            <input type="email" id="email" autocomplete="off" class="form_input" />
-            <div id="email_error" class="errortext"></div>
-          </div>
-        </div>
-        <div class="form_item">
-          <label for="password" class="form_label">Password:</label>
-          <div class="form_cont_input">
-            <input type="password" id="password" autocomplete="off" class="form_input" />
-            <div id="password_error" class="errortext"></div>
-          </div>
-        </div>
-        <div class="form_item">
-          <label for="yearOfBirth" class="form_label">Year of birth:</label>
-          <div class="form_cont_input">
-            <select name="yearOfBirth" class="form_select">
-              <option value="">Choose your year of birthday</option>
-              <option value="2000">2000</option>
-              <option value="2001">2001</option>
-              <option value="2002">2002</option>
-              <option value="2003">2003</option>
-              <option value="2004">2004</option>
-              <option value="2005">2005</option>
-              <option value="2006">2006</option>
-              <option value="2007">2007</option>
-              <option value="2008">2008</option>
-              <option value="2009">2009</option>
-              <option value="2010">2010</option>
-              <option value="2011">2011</option>
-              <option value="2012">2012</option>
-              <option value="2013">2013</option>
-              <option value="2014">2014</option>
-              <option value="2015">2015</option>
-              <option value="2016">2016</option>
-              <option value="2017">2017</option>
-              <option value="2018">2018</option>
-              <option value="2019">2019</option>
-              <option value="2020">2020</option>
-              <option value="2021">2021</option>
-              <option value="2022">2022</option>
-              <option value="2023">2023</option>
-              <option value="2024">2024</option>
-              <option value="2025">2025</option>
-            </select>
-          </div>
-        </div>
-        <div class="form_item">
-          <label for="radio" class="form_label">Sex</label>
-          <div class="form_control">
-            <input type="radio" id="radio" name="sex" value="0" /> Man
-            <input type="radio" id="radio1" name="sex" value="1" /> Woman
-            <input type="radio" id="radio2" name="sex" value="2" /> Dinosaur
-          </div>
-        </div>
-        <div class="form_item">
-          <label for="checkbox" class="form_label">I agree with the rules</label>
-          <div class="form_control">
-            <input id="checkbox" type="checkbox" name="rules" required />
-          </div>
-        </div>
-      </fieldset>
-      <div class="label">
-        <label class="label">Load photo</label>
-        <input type="file" name="avatar" />
+    <div class="container">
+      <div class="form_img">
+        <a href="index.html">
+          <img
+            src="images/scale_1200.png"
+            width="500"
+            height="500"
+            title="angry dino"
+            class="img"
+            alt="Dinosaur"
+          />
+        </a>
       </div>
-      <div class="form_title">
-        <h5 style="font-size: 25px">Choose Your Favorite Dinosaur</h5>
-        <textarea placeholder="Name your favorite dinosaur" class="textarea"></textarea>
-      </div>
+      <div class="form_block">
+        <div class="search-container">
+          <a href="https://www.google.com">Find out anything else</a>
+        </div>
+        <h1 style="font-size: 45px" class="form_title">REGISTRATION</h1>
+        <form action="#" id="form" class="form">
+          <fieldset>
+            <div class="form_item">
+              <label for="name" class="form_label">Name:</label>
+              <div class="form_cont_input">
+                <input type="text" id="name" autocomplete="off" class="form_input" />
+                <div id="name_error" class="errortext"></div>
+              </div>
+            </div>
+            <div class="form_item">
+              <label for="email" class="form_label">Email:</label>
+              <div class="form_cont_input">
+                <input type="email" id="email" autocomplete="off" class="form_input" />
+                <div id="email_error" class="errortext"></div>
+              </div>
+            </div>
+            <div class="form_item">
+              <label for="password" class="form_label">Password:</label>
+              <div class="form_cont_input">
+                <input type="password" id="password" autocomplete="off" class="form_input" />
+                <div id="password_error" class="errortext"></div>
+              </div>
+            </div>
+            <div class="form_item">
+              <label for="yearOfBirth" class="form_label">Year of birth:</label>
+              <div class="form_cont_input">
+                <select name="yearOfBirth" class="form_select">
+                  <option value="">Choose your year of birthday</option>
+                  <option value="2000">2000</option>
+                  <option value="2001">2001</option>
+                  <option value="2002">2002</option>
+                  <option value="2003">2003</option>
+                  <option value="2004">2004</option>
+                  <option value="2005">2005</option>
+                  <option value="2006">2006</option>
+                  <option value="2007">2007</option>
+                  <option value="2008">2008</option>
+                  <option value="2009">2009</option>
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                </select>
+              </div>
+            </div>
+            <div class="form_item">
+              <label for="radio" class="form_label">Sex</label>
+              <div class="form_control">
+                <input type="radio" id="radio" name="sex" value="0" /> Man
+                <input type="radio" id="radio1" name="sex" value="1" /> Woman
+                <input type="radio" id="radio2" name="sex" value="2" /> Dinosaur
+              </div>
+            </div>
+            <div class="form_item">
+              <label for="checkbox" class="form_label">I agree with the rules</label>
+              <div class="form_control">
+                <input id="checkbox" type="checkbox" name="rules" required />
+              </div>
+            </div>
+          </fieldset>
+          <div class="label">
+            <label class="label">Load photo</label>
+            <input type="file" name="avatar" />
+          </div>
+          <div class="form_title">
+            <h5 style="font-size: 25px">Choose Your Favorite Dinosaur</h5>
+            <textarea placeholder="Name your favorite dinosaur" class="textarea"></textarea>
+          </div>
 
-      <button type="submit" class="form_btn">Enter</button>
-    </form>
-    <script src="./scripts/signin.js" type="module"></script>
+          <button type="submit" class="form_btn">Enter</button>
+        </form>
+        <script src="./scripts/signin.js" type="module"></script>
+      </div>
+    </div>
   </body>
 </html>
