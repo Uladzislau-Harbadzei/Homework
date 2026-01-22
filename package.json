@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "browser-sync start --server --files '**/*' --no-notify --port 3000",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write \"**/*.{js,css,html}\"",
@@ -13,9 +14,18 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "prettier --write"],
-    "*.html": ["eslint --fix", "prettier --write"],
-    "*.css": ["stylelint --fix", "prettier --write"]
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.html": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,6 +34,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^3.0.4",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-css": "^0.11.0",
