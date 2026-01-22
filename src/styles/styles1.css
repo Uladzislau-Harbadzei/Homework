@@ -83,12 +83,11 @@ tbody {
 }
 
 label {
-  float: left;
   padding-right: 10px;
 }
 
 .main {
-  float: left;
+  padding-right: 10px;
 }
 
 .myinput {
@@ -116,11 +115,9 @@ label {
 }
 
 .search-container {
-  display: block;
-  width: 20px;
   height: 20px;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
 .search-container input {
@@ -136,42 +133,7 @@ label {
   height: 20px;
 }
 
-.container {
-  display: flex;
-  flex-direction: column; /* для узких экранов */
-  align-items: center;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.image_block,
-.form_block {
-  width: 100%;
-}
-
-.image_block img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-/* Стили для широких экранов (от 768px и выше) */
-@media (width >= 768px) {
-  .container {
-    flex-direction: row; /* Выстраиваем в ряд */
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .image_block {
-    flex: 1; /* Занимает 50% места */
-  }
-
-  .form_block {
-    flex: 1; /* Занимает 50% места */
-    padding-left: 40px;
-  }
+.search-input {
+  height: 40px;
+  width: 200px;
 }
