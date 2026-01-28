@@ -88,3 +88,13 @@ document.getElementById('createTask').addEventListener('click', function () {
     form.reset();
   }
 });
+
+document.getElementById('input').addEventListener('keyup', function () {
+  let filter = this.value.toLowerCase();
+  let rows = document.querySelectorAll('#table tbody tr');
+
+  rows.forEach((row) => {
+    let text = row.textContent.toLowerCase();
+    row.style.display = text.includes(filter) ? '' : 'none';
+  });
+});
