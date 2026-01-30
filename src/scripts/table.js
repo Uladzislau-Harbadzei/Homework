@@ -78,14 +78,10 @@ document.getElementById('createTask').addEventListener('click', function () {
     `;
     tbody.innerHTML += newRowHtml;
 
-    document.getElementById(task).addEventListener('click', function (event) {
+    document.getElementById(trname).addEventListener('click', function () {
       if (!confirm('Are you sure you want to delete?')) return;
-      const target = event.target;
-      const tableRow = tbody.querySelector(`#${target.id}_tr`);
-      tableRow.remove();
+      this.remove();
     });
-
-    form.reset();
   }
 });
 
