@@ -1,4 +1,4 @@
-document.getElementById('usersbuton').addEventListener('click', function () {
+document.getElementById('usersbuton').addEventListener('DOMContentLoaded', function () {
   fetch('https://dummyjson.com/users')
     .then((response) => {
       return response.json();
