@@ -4,7 +4,7 @@ import html from 'eslint-plugin-html';
 
 export default [
   {
-    ignores: ['node_modules/**', 'dist/**', 'build/**', '.vscode/**'],
+    ignores: ['node_modules/**', 'dist/**', 'build/**', '.vscode/**', 'playwright-report/**'],
   },
   {
     files: ['**/*.js', '**/*.html'],

@@ -48,7 +48,7 @@ test('Проверка названия элементов навигации', 
   );
 });
 
-test('Проверка атрибутов href', async ({ page }) => {
+test('Проверка атрибута href', async ({ page }) => {
   await page.goto('http://127.0.0.1:5500/src/index.html');
   await expect(page.getByRole('link', { name: 'Find out anything else' })).toHaveAttribute(
     'href',
