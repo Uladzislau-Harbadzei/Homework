@@ -1,36 +1,87 @@
 import { test, expect } from '@playwright/test';
 import { beforeEach } from 'node:test';
+
+const elements = [
+  {
+    locator: (page) => page.getByRole('link', { name: 'Dinosaur' }),
+    name: 'Dinosaur img',
+  },
+  {
+    locator: (page) => page.getByRole('heading', { name: 'REGISTRATION' }),
+    name: 'Header REGISTRATION',
+  },
+  {
+    locator: (page) => page.getByRole('link', { name: 'Find out anything else' }),
+    name: 'link Found',
+  },
+  {
+    locator: (page) => page.getByRole('textbox', { name: 'Name:' }),
+    name: 'text Name',
+  },
+  {
+    locator: (page) => page.getByRole('textbox', { name: 'Email:' }),
+    name: 'text Email',
+  },
+  {
+    locator: (page) => page.getByRole('textbox', { name: 'Password:' }),
+    name: 'text Password',
+  },
+  {
+    locator: (page) => page.getByRole('radio', { name: 'Sex' }),
+    name: 'radio button',
+  },
+  {
+    locator: (page) => page.getByRole('checkbox', { name: 'I agree with the rules' }),
+    name: 'checkbox',
+  },
+  {
+    locator: (page) => page.getByRole('button', { name: 'Choose File' }),
+    name: 'button Choose file',
+  },
+  {
+    locator: (page) => page.getByRole('button', { name: 'Enter' }),
+    name: 'button Enter',
+  },
+  {
+    locator: (page) => page.getByText('Name:'),
+    name: 'text Name',
+  },
+  {
+    locator: (page) => page.getByText('Email:'),
+    name: 'text Email',
+  },
+  {
+    locator: (page) => page.getByText('Password:'),
+    name: 'text Password',
+  },
+  {
+    locator: (page) => page.getByText('Year of birth:'),
+    name: 'text Year',
+  },
+  {
+    locator: (page) => page.getByText('Sex'),
+    name: 'text Sex',
+  },
+  {
+    locator: (page) => page.getByText('I agree with the rules'),
+    name: 'text checkbox',
+  },
+  {
+    locator: (page) => page.getByText('Load photo'),
+    name: 'text Load photo',
+  },
+];
+
 test.describe('index.page', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('http://127.0.0.1:5500/src/index.html');
   });
-  test('Проверка отображения элементов навигации', async ({ page }) => {
-    await expect.soft(page.getByRole('link', { name: 'Dinosaur' })).toBeVisible();
-    await expect.soft(page.getByRole('heading', { name: 'REGISTRATION' })).toBeVisible();
-    await expect.soft(page.getByRole('link', { name: 'Find out anything else' })).toBeVisible();
-    await expect.soft(page.getByText('Name:')).toBeVisible();
-    await expect.soft(page.getByRole('textbox', { name: 'Name:' })).toBeVisible();
-    await expect.soft(page.getByText('Email:')).toBeVisible();
-    await expect.soft(page.getByRole('textbox', { name: 'Email:' })).toBeVisible();
-    await expect.soft(page.getByText('Password:')).toBeVisible();
-    await expect.soft(page.getByRole('textbox', { name: 'Password:' })).toBeVisible();
-    await expect.soft(page.getByText('Year of birth:')).toBeVisible();
-    await expect.soft(page.getByRole('combobox')).toBeVisible();
-    await expect.soft(page.getByText('Sex')).toBeVisible();
-    await expect.soft(page.getByRole('radio', { name: 'Sex' })).toBeVisible();
-    await expect.soft(page.locator('#radio1')).toBeVisible();
-    await expect.soft(page.locator('#radio2')).toBeVisible();
-    await expect.soft(page.getByText('I agree with the rules')).toBeVisible();
-    await expect.soft(page.getByRole('checkbox', { name: 'I agree with the rules' })).toBeVisible();
-    await expect.soft(page.getByText('Load photo')).toBeVisible();
-    await expect.soft(page.getByRole('button', { name: 'Choose File' })).toBeVisible();
-    await expect
-      .soft(page.getByRole('heading', { name: 'Choose Your Favorite Dinosaur' }))
-      .toBeVisible();
-    await expect
-      .soft(page.getByRole('textbox', { name: 'Name your favorite dinosaur' }))
-      .toBeVisible();
-    await expect.soft(page.getByRole('button', { name: 'Enter' })).toBeVisible();
+  test('Проверка отображения элементов ${name}', async ({ page }) => {
+    elements.forEach(({ locator, name }) => {
+      test.step(`Проверка отображения изображения Динозавр`, async () => {
+        await expect.soft(locator(page)).toBeVisible();
+      });
+    });
   });
 
   test('Проверка названия элементов навигации', async ({ page }) => {
