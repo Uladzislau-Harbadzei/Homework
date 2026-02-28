@@ -5,7 +5,6 @@ let password = document.getElementById('password');
 let name_error = document.getElementById('name_error');
 let email_error = document.getElementById('email_error');
 let password_error = document.getElementById('password_error');
-let submit = document.getElementById('submit'); //add
 
 const clearErrors = () => {
   Array.from(document.querySelectorAll('.errortext')).forEach(
@@ -19,7 +18,6 @@ const setError = (texterror, element) => {
 
 document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault();
-
   clearErrors();
 
   isValid = true;
@@ -40,7 +38,6 @@ document.getElementById('form').addEventListener('submit', function (event) {
   }
 
   if (isValid) {
-    submit.disabled = false; //add
     console.log('The form has been successfully submitted');
     window.location.href = `/src/page2.html?username=${username.value}`;
     document.getElementById('form').reset();
