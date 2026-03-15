@@ -1,4 +1,5 @@
 import { test, expect, Page, Locator } from '@playwright/test';
+import { checkAppInitPage } from './helpers/checkAppInitPage.ts';
 import { beforeEach } from 'node:test';
 
 interface Elements {
@@ -75,10 +76,12 @@ const elements: Elements[] = [
 ];
 
 test.describe('index.page', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto('http://127.0.0.1:5500/src/index.html');
+  test('test', async ({ page }) => {
+    await checkAppInitPage({ page });
   });
+
   test('Проверка отображения элементов ${name}', async ({ page }) => {
+    await checkAppInitPage({ page });
     elements.forEach(({ locator, name }) => {
       test.step(`Проверка отображения элемента ${name}`, async () => {
         await expect.soft(locator(page)).toBeVisible();

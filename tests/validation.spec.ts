@@ -103,7 +103,7 @@ test.describe('autorization', () => {
 
     await submitButton.click();
     await expect(error).toBeVisible();
-    await expect(error).toHaveText('he password must be at least 6 characters long.');
+    await expect(error).toHaveText('the password must be at least 6 characters long.');
   });
 
   test('autorization negative - password is incorrect', async ({ page }) => {
@@ -124,6 +124,6 @@ test.describe('autorization', () => {
 
     await submitButton.click();
     await expect(error).toBeVisible();
-    await expect(error).toHaveText('he password must be at least 6 characters long.');
+    await expect(error).toHaveText('the password must be at least 6 characters long.');
   });
 });
