@@ -4,13 +4,13 @@ test.describe('screenshot', () => {
   test('make screenshot', async ({ page }) => {
     await page.goto('http://127.0.0.1:5500/src/index.html');
     // Сохранение скриншота в файл
-    await page.screenshot({ path: 'screenshot.png' });
+    await page.screenshot({ path: 'screenshot.png', fullPage: true });
   });
 
   test('comparison with standard', async ({ page }) => {
     await page.goto('http://127.0.0.1:5500/src/index.html');
     // Сравнение скриншота с сохраненным ранее эталоном
-    await expect(page).toHaveScreenshot({ path: 'screenshot.png' });
+    await expect(page).toHaveScreenshot('screenshot.png');
   });
 
   test('Enter data and validation', async ({ page }) => {
@@ -24,7 +24,7 @@ test.describe('screenshot', () => {
     const radio = page.locator('#radio');
 
     // Вводим данные в поля формы
-    await page.fill('input#name', '');
+    await page.fill('input#name', 'test');
     await page.fill('input#email', 'test123@test.by');
     await page.fill('input#password', 'testpassword123');
     await page.screenshot({ path: 'screenshots/02-form-filled.png', fullPage: true });
