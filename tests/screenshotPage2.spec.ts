@@ -22,8 +22,8 @@ test.describe('screenshot', () => {
     const dropdown = page.locator('#taskcomps');
 
     // Вводим данные в поля формы
-    await page.fill('input#start', '01.01.2100');
-    await page.fill('input#finish', '02.01.2100');
+    await page.fill('input#start', '2000-01-01');
+    await page.fill('input#finish', '2000-01-02');
     await page.fill('input#taskname', 'test');
     await page.screenshot({ path: 'screenshots/02-form-filled.png', fullPage: true });
 
