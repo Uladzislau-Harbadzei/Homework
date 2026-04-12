@@ -26,9 +26,12 @@ test.describe('screenshot', () => {
     //page.locator("hashtag#username").fill("JohnDoe");
     page.locator('input#start').fill('2000-01-01');
     //await page.fill('input#start', '2000-01-01');
-    await page.fill('input#finish', '2000-01-02');
-    await page.fill('input#taskname', 'test');
-    await page.fill('input#comp', 'In progress');
+    page.locator('input#finish').fill('2000-01-02');
+    //await page.fill('input#finish', '02.01.2020');
+    page.locator('input#taskname').fill('test');
+    //await page.fill('input#taskname', 'test');
+    page.locator('input#comp').fill('In progress');
+    //await page.fill('input#comp', 'In progress');
     //await page.pause();
     await page.screenshot({ path: 'screenshots/02-form-filled.png', fullPage: true });
 
