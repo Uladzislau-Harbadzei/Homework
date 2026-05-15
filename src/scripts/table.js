@@ -61,7 +61,6 @@ document.getElementById('createTask').addEventListener('click', function () {
 
     let task = taskname.value;
     let trname = `${task}_tr`;
-    console.log(start.value);
     const newRowHtml = `
         <tr id=${trname}>
             <td>${rowsCount + 1}</td>
